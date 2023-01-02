@@ -38,5 +38,5 @@ impl PackageManager for Apt {
 #[allow(unused_must_use)]
 fn main() {
     let apt = Apt {};
-    apt.install_package("zsh", None);
+    apt.install_package("growisofs", None);
 }
