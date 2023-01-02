@@ -20,6 +20,7 @@ impl PackageManager for Apt {
             .arg("install")
             .args(install_flags.unwrap_or("").split(' ').collect::<Vec<_>>())
             .output();
+        #[allow(unused_must_use)]
         match output {
             Ok(output) => {
                 io::stdout().write(&output.stdout);
@@ -34,6 +35,7 @@ impl PackageManager for Apt {
     }
 }
 
+#[allow(unused_must_use)]
 fn main() {
     let apt = Apt {};
     apt.install_package("zsh", None);
